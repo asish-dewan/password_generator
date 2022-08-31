@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var char = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~";
+var char = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~"];
 var passwordlength = (8 <= 128);
 
 
@@ -31,13 +31,21 @@ else if (passwordlength > 128) {
 
 // Lowercase, Uppercase and numeric prompts
   else {
-    window.alert ("Click OK to include lowercase characters");
-    window.alert ("Click OK to include UPPERCASE characters");
-    window.alert ("Click OK to include numeric characters");
+    window.alert ("Click OK to include ' lowercase ' characters");
+    window.alert ("Click OK to include ' UPPERCASE ' characters");
+    window.alert ("Click OK to include ' numeric ' characters");
   }
 
+// Validate input
+  for (var i = 0; i === passwordlength; i++){
+  var index = Math.floor(Math.random() * char.length);
+  password += char.substring(index, index + 1)
+  }
 
-// Special characters prompt (This can be and/or option)
+  console.log (index)
+// Display password
+
+
 
 }
 
