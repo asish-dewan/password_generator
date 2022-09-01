@@ -9,11 +9,10 @@ var specialchar = " !#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~ ";
 // Define generatePassword
 
 function generatePassword () {
-  var chars = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~"];
+  var randomPass = "";
 
-  var password = "";
-
-  for (var i = 0; i <= passwordlength; i++)
+ 
+/*   for (var i = 0; i <= passwordlength; i++)
   {
     var index = Math.floor(Math.random() * chars.length)
     password += chars[index];
@@ -22,12 +21,18 @@ function generatePassword () {
     console.log ("button clicked")
 
     var passwordlength
-
+ */
 }
 // Choose length of password
+let passwordlength = prompt ("Choose the length of your password");
 
 // Add min and max conditions
-
+if (passwordlength < 8) {
+  alert ("Password is too short. Mininum number = 8");
+}
+else if (passwordlength > 128) {
+  alert ("Password is too long. Max number = 128");
+}
 // Confirm Uppercase
 
 // Confirm Lowercase
