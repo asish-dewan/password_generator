@@ -44,15 +44,15 @@ else {
 
   // Validate at least one character selected
   let validate = window.confirm ("Have you selected at least ONE character type?")
-  if (validate != true) {
+  if (validate = !true) {
     alert ("Please select at least ONE character type");
   } 
 
 }
 
   let finalpassword = "";
-  for (var i = 0; i <= passwordlength; i++) {
-    var index = randomPass.charAt(Math.floor(Math.random()* randomPass.length))
+  for (let i = 0; i < passwordlength; i++) {
+    finalpassword += randomPass.charAt(Math.floor(Math.random() * randomPass.length))
     } 
     return finalpassword
 
