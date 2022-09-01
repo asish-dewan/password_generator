@@ -4,27 +4,15 @@ var uCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var lCase = 'abcdefghijklmnopqrstuvwyz';
 var numeric = '0123456789';
 var specialchar = " !#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~ ";
-
+var validate = (uCase && lCase && numeric && specialchar);
 
 // Define generatePassword
 
 function generatePassword () {
   var randomPass = "";
 
- 
-/*   for (var i = 0; i <= passwordlength; i++)
-  {
-    var index = Math.floor(Math.random() * chars.length)
-    password += chars[index];
-    } 
-
-    console.log ("button clicked")
-
-    var passwordlength
- */
-}
 // Choose length of password
-let passwordlength = prompt ("Choose the length of your password");
+let passwordlength = window.prompt ("Choose the length of your password");
 
 // Add min and max conditions
 if (passwordlength < 8) {
@@ -35,31 +23,40 @@ else if (passwordlength > 128) {
 }
 // Confirm Uppercase
 else {
-  let uCase = confirm ("Do you want to include 'UPPERCASE' characters?");
+  let uCase = window.confirm ("Do you want to include 'UPPERCASE' characters?");
   if (uCase == true) {
     randomPass += uCase
   }
   // Confirm Lowercase
-  let lCase = confirm ("Do you want to include 'lowercase' characters?");
+  let lCase = window.confirm ("Do you want to include 'lowercase' characters?");
   if (lCase == true) {
     randomPass += lCase
   }
   // Confirm numeric and/or special characters
-  let numeric = confirm ("Do you want to include 'Numeric' characters?");
+  let numeric = window.confirm ("Do you want to include 'Numeric' characters?");
   if (numeric == true) {
     randomPass += numeric
   }
-  let specialchar = confirm ("Do you want to include 'Special' characters?");
+  let specialchar = window.confirm ("Do you want to include 'Special' characters?");
   if (specialchar == true) {
     randomPass += specialchar
   }
-  
+
+  // Validate at least one character selected
+  let validate = window.confirm ("Have you selected at least ONE character type?")
+  if (validate != true) {
+    alert ("Please select at least ONE character type");
+  } 
+
 }
 
+  let finalpassword = "";
+  for (var i = 0; i <= passwordlength; i++) {
+    var index = randomPass.charAt(Math.floor(Math.random()* randomPass.length))
+    } 
+    return finalpassword
 
-
-
-// Validate at least one character selected
+  }
 
 // Run write password script
 
