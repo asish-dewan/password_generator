@@ -22,30 +22,30 @@ function generatePassword() {
   }
   // Confirm Uppercase
   else {
-    let uCase = window.confirm(
+    let uCaseOp = window.confirm(
       "Do you want to include 'UPPERCASE' characters?"
     );
-    if (uCase == true) {
+    if (uCaseOp == true) {
       randomPass += uCase;
     }
     // Confirm Lowercase
-    let lCase = window.confirm(
+    let lCaseOp = window.confirm(
       "Do you want to include 'lowercase' characters?"
     );
-    if (lCase == true) {
+    if (lCaseOp == true) {
       randomPass += lCase;
     }
     // Confirm numeric and/or special characters
-    let numeric = window.confirm(
+    let numericOp = window.confirm(
       "Do you want to include 'Numeric' characters?"
     );
-    if (numeric == true) {
+    if (numericOp == true) {
       randomPass += numeric;
     }
-    let specialchar = window.confirm(
+    let specialcharOp = window.confirm(
       "Do you want to include 'Special' characters?"
     );
-    if (specialchar == true) {
+    if (specialcharOp == true) {
       randomPass += specialchar;
     }
 
@@ -56,7 +56,7 @@ function generatePassword() {
     if ((validate = !true)) {
       alert("Please select at least ONE character type");
     }
-  
+    
   }
 
   let finalpassword = "";
