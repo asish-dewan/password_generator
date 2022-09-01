@@ -34,10 +34,30 @@ else if (passwordlength > 128) {
   alert ("Password is too long. Max number = 128");
 }
 // Confirm Uppercase
+else {
+  let uCase = confirm ("Do you want to include 'UPPERCASE' characters?");
+  if (uCase == true) {
+    randomPass += uCase
+  }
+  // Confirm Lowercase
+  let lCase = confirm ("Do you want to include 'lowercase' characters?");
+  if (lCase == true) {
+    randomPass += lCase
+  }
+  // Confirm numeric and/or special characters
+  let numeric = confirm ("Do you want to include 'Numeric' characters?");
+  if (numeric == true) {
+    randomPass += numeric
+  }
+  let specialchar = confirm ("Do you want to include 'Special' characters?");
+  if (specialchar == true) {
+    randomPass += specialchar
+  }
+  
+}
 
-// Confirm Lowercase
 
-// Confirm numeric and/or special characters
+
 
 // Validate at least one character selected
 
