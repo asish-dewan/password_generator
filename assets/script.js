@@ -1,12 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var uCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var lCase = 'abcdefghijklmnopqrstuvwyz';
+var numeric = '0123456789';
+var specialchar = " !#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~ ";
+
 
 // Define generatePassword
 
 function generatePassword () {
   var chars = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&!#$%&'()*+,-.:;<=>?@]^_`{|}~"];
 
-  var passwordlength = 128;
   var password = "";
 
   for (var i = 0; i <= passwordlength; i++)
@@ -16,6 +20,8 @@ function generatePassword () {
     } 
 
     console.log ("button clicked")
+
+    var passwordlength
 
 }
 // Choose length of password
